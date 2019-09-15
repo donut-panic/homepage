@@ -1,0 +1,50 @@
+.wrapper {
+    @include flex(row, stretch, stretch);
+    background-color: red;
+    width: 100%;
+
+    &__header {
+        padding: 60px;
+        text-align: right;
+        flex-basis: 35%;
+        flex-grow: 1;
+
+        &--dark {
+            background-color: #f8f8f8;
+        }
+
+        &--light {
+            background-color: #fbfbfb;
+        }
+
+    }
+
+    &__content {
+        padding: 60px;
+        background-color: lightgrey;
+        flex-basis: 65%;
+        flex-grow: 1;
+
+        &--dark {
+            background-color: #fcfcfc;
+        }
+
+        &--light {
+            background-color: #fff;
+        }
+    }
+
+    &__heading {
+        font-family: $main-font;
+        font-size: 1.7rem;
+        color: $dark-grey-text;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        font-family: $main-font;
+        font-size: 1.4rem;
+        color: #727272;   
+    }
+
+}

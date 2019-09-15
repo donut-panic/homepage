@@ -1,0 +1,68 @@
+.experience {
+    width: 100%;
+    max-width: $max-width;
+    // background-color: rgb(253, 253, 175);
+    font-family: $main-font;
+    font-size: 1.3rem;
+
+    &__row {
+        // margin-bottom: 10px;
+        padding-bottom: 60px;
+        border-left: 2px solid #ececec;
+        position: relative;
+    }
+    
+    &__title {
+        // background-color: yellow;
+        flex-basis: 40%;
+        padding-left: 30px;
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        background-color: $primary-color;
+        position: absolute;
+        top: 0;
+        left: -6px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px #fff;
+    }
+
+    &__desc-wrapper {
+        // background-color: lightgrey;
+        flex-basis: 60%;
+    }
+
+    &__time {
+        color: $medium-grey-text;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    &__content {
+        @include flex(row, stretch, flex-start);
+    }
+
+    &__company {
+        color: $dark-grey-text;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    &__position {
+        color: $dark-grey-text;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    &__desc {
+        color: $medium-grey-text;
+        font-size: 1.4rem;
+        line-height: 170%;
+        font-weight: 400;
+    }
+
+}

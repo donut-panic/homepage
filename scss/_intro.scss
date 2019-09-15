@@ -1,0 +1,16 @@
+.intro {
+    max-width: $max-width;
+
+    &__text {
+        font-family: $main-font;
+        font-size: 1.6rem;
+        line-height: 170%;
+        margin-bottom: 2rem;
+        color: #616161;
+    }
+
+    &__text:last-child {
+        margin: 0;
+    }
+
+}
