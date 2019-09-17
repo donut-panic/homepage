@@ -1,21 +1,28 @@
 .experience {
     width: 100%;
     max-width: $max-width;
-    // background-color: rgb(253, 253, 175);
     font-family: $main-font;
     font-size: 1.3rem;
 
     &__row {
-        // margin-bottom: 10px;
-        padding-bottom: 60px;
+        padding-bottom: 50px;
         border-left: 2px solid #ececec;
         position: relative;
+
+        &:last-child {
+            padding-bottom: 20px;
+        }
+
+        @include media-query(medium) {
+            padding-bottom: 60px;
+        }
+
     }
     
     &__title {
-        // background-color: yellow;
         flex-basis: 40%;
         padding-left: 30px;
+        margin-bottom: 20px;
     }
 
     &__dot {
@@ -30,8 +37,13 @@
     }
 
     &__desc-wrapper {
-        // background-color: lightgrey;
         flex-basis: 60%;
+        padding-left: 30px;
+
+        @include media-query(medium) {
+            padding: 0;
+        }
+
     }
 
     &__time {
@@ -42,7 +54,12 @@
     }
 
     &__content {
-        @include flex(row, stretch, flex-start);
+        @include flex(column, stretch, flex-start);
+    
+        @include media-query(medium) {
+            flex-direction: row;
+        }
+
     }
 
     &__company {

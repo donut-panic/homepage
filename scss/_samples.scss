@@ -12,9 +12,7 @@
     }
 
     &__item {
-        // background-color: rgb(255, 255, 193);
         flex-basis: 50%;
-        // margin: 0 20px 20px 0;
         padding: 0 20px 20px 0;
         flex-grow: 1;
 
@@ -23,7 +21,7 @@
         }
 
         &:hover hr {
-            width: 50px;
+            width: 70px;
         }
     }
 
@@ -60,7 +58,7 @@
         height: 3px;
         border: none;
         margin-bottom: 3rem;
-        transition: .5s ease-out;
+        transition: .5s .1s ease-out;
     }
 
     &__item-desc {

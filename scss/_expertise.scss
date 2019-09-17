@@ -7,15 +7,14 @@
     font-size: 1.4rem;
 
     &__section {
-        flex-basis: 50%;
-        // background-color: #ffffb8;
-        padding-right: 30px;
         @include flex(row, stretch, stretch);
+        flex-basis: 100%;
         margin-bottom: 50px;
-    }
 
-    &__section:nth-last-child(-n+2) {
-        margin-bottom: 0;
+        @include media-query(medium) {
+            flex-basis: 50%;
+            padding-right: 30px;
+        }
     }
 
     &__icon-wrapper {
