@@ -7,9 +7,15 @@ html {
     font-size: 62.5%;
 }
 
+::selection {
+    background: $primary-color;
+    color: #fff;
+}
+
 @import 'wrapper';
 @import 'hero';
 @import 'intro';
 @import 'experience';
 @import 'expertise';
 @import 'samples';
+@import 'download';

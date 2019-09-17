@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:100,400,400i,700,700i&display=swap");
 * {
   padding: 0;
@@ -24,6 +25,16 @@
 
 html {
   font-size: 62.5%;
+}
+
+::-moz-selection {
+  background: #09b97f;
+  color: #fff;
+}
+
+::selection {
+  background: #09b97f;
+  color: #fff;
 }
 
 .wrapper {
@@ -233,7 +244,7 @@ html {
 }
 
 .hero__surname {
-  color: #ffd000;
+  color: #09b97f;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -261,7 +272,7 @@ html {
 }
 
 .hero__icon:hover svg {
-  fill: #ffd000;
+  fill: #09b97f;
 }
 
 .hero__icon:last-child {
@@ -351,7 +362,6 @@ html {
   font-family: Lato, sans-serif;
   color: #939393;
   font-size: 1.3rem;
-  border-top: 1px solid #dddddd;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -360,10 +370,18 @@ html {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-top: 25px;
+  padding-top: 25px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: none;
+}
+
+.hero__contact-field:hover {
+  border-color: #09b97f;
+  color: #09b97f;
 }
 
 @media screen and (min-width: 460px) {
@@ -378,7 +396,17 @@ html {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     text-align: left;
+    border-top: 1px solid #dddddd;
   }
+}
+
+.hero__contact-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero__contact-link::after {
+  content: " →";
 }
 
 .hero__contact-title {
@@ -440,7 +468,7 @@ html {
 .experience__dot {
   width: 10px;
   height: 10px;
-  background-color: #ffd000;
+  background-color: #09b97f;
   position: absolute;
   top: 0;
   left: -6px;
@@ -650,7 +678,7 @@ html {
 }
 
 .samples__deco-line {
-  background-color: #ffd000;
+  background-color: #09b97f;
   width: 0;
   height: 3px;
   border: none;
@@ -664,5 +692,40 @@ html {
   color: #727272;
   font-size: 1.4rem;
   line-height: 170%;
+}
+
+.download {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .download {
+    text-align: left;
+  }
+}
+
+.download__button {
+  display: inline-block;
+  border: 2px solid #939393;
+  height: 50px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: #727272;
+  font-size: 1.4rem;
+  text-decoration: none;
+  line-height: 48px;
+  padding: 0 40px;
+  border-radius: 25px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin: 0 auto;
+}
+
+.download__button:hover {
+  border-color: #09b97f;
+  background-color: #09b97f;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
