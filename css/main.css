@@ -101,7 +101,7 @@ html {
           flex-grow: 1;
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 768px) {
   .wrapper__content {
     padding: 60px;
   }
@@ -483,7 +483,7 @@ html {
   padding-left: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .experience__desc-wrapper {
     padding: 0;
   }
@@ -512,7 +512,7 @@ html {
           justify-content: flex-start;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .experience__content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -582,7 +582,7 @@ html {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .expertise__section {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
@@ -633,12 +633,19 @@ html {
 }
 
 .samples__item {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   padding: 0 20px 20px 0;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+@media screen and (min-width: 460px) {
+  .samples__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 .samples__item:hover div {
@@ -697,22 +704,16 @@ html {
 .download {
   width: 100%;
   max-width: 800px;
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .download {
-    text-align: left;
-  }
 }
 
 .download__button {
+  width: 100%;
   display: inline-block;
-  border: 2px solid #939393;
+  border: 1px solid #09b97f;
   height: 50px;
   font-family: Lato, sans-serif;
   font-weight: 700;
-  color: #727272;
+  color: #09b97f;
   font-size: 1.4rem;
   text-decoration: none;
   line-height: 48px;
@@ -721,6 +722,13 @@ html {
   -webkit-transition: .3s;
   transition: .3s;
   margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .download__button {
+    width: auto;
+  }
 }
 
 .download__button:hover {

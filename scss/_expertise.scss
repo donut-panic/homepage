@@ -11,7 +11,7 @@
         flex-basis: 100%;
         margin-bottom: 50px;
 
-        @include media-query(medium) {
+        @include media-query(large) {
             flex-basis: 50%;
             padding-right: 30px;
         }

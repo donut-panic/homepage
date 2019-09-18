@@ -12,9 +12,13 @@
     }
 
     &__item {
-        flex-basis: 50%;
+        flex-basis: 100%;
         padding: 0 20px 20px 0;
         flex-grow: 1;
+
+        @include media-query(small) {
+            flex-basis: 50%;
+        }
 
         &:hover div {
             opacity: 1;
