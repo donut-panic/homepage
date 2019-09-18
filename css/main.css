@@ -736,4 +736,115 @@ html {
   background-color: #09b97f;
   color: #fff;
 }
+
+.form__text-input, .form__text-area {
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 1.6rem;
+  width: 100%;
+  max-width: 800px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.form__text-input::-webkit-input-placeholder, .form__text-area::-webkit-input-placeholder {
+  color: #939393;
+}
+
+.form__text-input:-ms-input-placeholder, .form__text-area:-ms-input-placeholder {
+  color: #939393;
+}
+
+.form__text-input::-ms-input-placeholder, .form__text-area::-ms-input-placeholder {
+  color: #939393;
+}
+
+.form__text-input::placeholder, .form__text-area::placeholder {
+  color: #939393;
+}
+
+.form__text-input:focus, .form__text-area:focus {
+  border-bottom-color: #09b97f;
+  outline: none;
+}
+
+.form__text-input:focus + .form__icon, .form__text-area:focus + .form__icon {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.form__text-area {
+  height: 300px;
+}
+
+.form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form__icon {
+  width: 10px;
+  margin-right: 10px;
+  opacity: 0;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #09b97f;
+  vector-effect: non-scaling-stroke;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.form__button {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #09b97f;
+  height: 50px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: #09b97f;
+  font-size: 1.4rem;
+  text-decoration: none;
+  line-height: 48px;
+  padding: 0 40px;
+  border-radius: 25px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin: 0 auto;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .form__button {
+    width: auto;
+  }
+}
+
+.form__button:hover {
+  border-color: #09b97f;
+  background-color: #09b97f;
+  color: #fff;
+}
 /*# sourceMappingURL=main.css.map */

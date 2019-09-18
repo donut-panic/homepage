@@ -1,0 +1,85 @@
+.form {
+
+    &__text-input {
+        display: block;
+        font-family: $main-font;
+        font-size: 1.6rem;
+        width: 100%;
+        max-width: $max-width;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        // margin-bottom: 30px;
+        transition: .3s;
+
+        &::placeholder {
+            color: $medium-grey-text;
+        }
+
+        &:focus {
+            border-bottom-color: $primary-color;
+            outline: none;
+        }
+
+        &:focus + .form__icon {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    }
+
+    &__text-area {
+        @extend .form__text-input;
+        height: 300px;
+    }
+
+    &__label {
+        @include flex(row, stretch, center);
+        margin-bottom: 30px;
+    }
+
+    &__icon {
+        width: 10px;
+        margin-right: 10px;
+        opacity: 0;
+        order: -1;
+        fill: none;
+        stroke-width: 2px;
+        stroke: $primary-color;
+        vector-effect: non-scaling-stroke;
+        transition: .3s;
+        transform: translateX(-20px);
+    }
+
+    &__button {
+        width: 100%;
+        display: inline-block;
+        border: 1px solid $primary-color;
+        height: 50px;
+        font-family: $main-font;
+        font-weight: 700;
+        color: $primary-color;
+        font-size: 1.4rem;
+        text-decoration: none;
+        line-height: 48px;
+        padding: 0 40px;
+        border-radius: 25px;
+        transition: .3s;
+        margin: 0 auto;
+        text-align: center;
+        background: transparent;
+        cursor: pointer;
+        
+
+        @include media-query(medium) {
+            width: auto;
+        }
+
+        &:hover {
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: #fff;
+        }
+    }
+
+}
