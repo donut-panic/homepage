@@ -18,3 +18,11 @@
         @error 'Wrong breakpoint name!';
     }
 }
+
+@mixin svg($width, $color) {
+    stroke-width: $width;
+    stroke: $color;
+    fill: none;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}

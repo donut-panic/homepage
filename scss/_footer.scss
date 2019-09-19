@@ -9,20 +9,19 @@
 
     &__contact-field {
         flex-grow: 1;
-        // padding-top: 25px;
+        margin-bottom: 30px;
         flex-basis: 100%;
         text-align: center;
-        transition: .3s;
-        // border: none;
+        transition: $short-transition-time;
 
         @include media-query(small) {
-            flex-basis: 50%;        
+            flex-basis: 50%;
         }
 
         @include media-query(large) {
             flex-basis: 25%;
             text-align: left;
-            // border-top: 1px solid #dddddd;    
+            margin-bottom: 0;
         }
 
     }
@@ -30,6 +29,7 @@
     &__contact-link {
         text-decoration: none;
         color: inherit;
+        transition: $short-transition-time;
 
         &::after {
             content: " →";
@@ -43,6 +43,26 @@
 
     &__contact-title {
         margin-bottom: 1.2rem;
+    }
+
+    &__go-up {
+        display: none;
+        position: absolute;
+        top: -80px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        border-radius: 50%;
+
+        @include media-query(large) {
+            display: block;
+        }
+
+    }
+
+    &__arrow-icon {
+        @include svg(2px, #fff);
     }
 
 }

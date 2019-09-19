@@ -10,7 +10,7 @@
         border-bottom: 1px solid #ccc;
         padding: 10px 0 10px 0px;
         background-color: transparent;
-        transition: .3s;
+        transition: $short-transition-time;
 
         &::placeholder {
             color: $medium-grey-text;
@@ -41,18 +41,13 @@
     }
 
     &__icon {
+        @include svg(2px, $primary-color);
         position: absolute;
         top: 16px;
         left: 0;
         width: 10px;
-        // margin-right: 10px;
         opacity: 0;
-        // order: -1;
-        fill: none;
-        stroke-width: 2px;
-        stroke: $primary-color;
-        vector-effect: non-scaling-stroke;
-        transition: .3s;
+        transition: $short-transition-time;
         transform: translateX(-20px);
     }
 
@@ -69,7 +64,7 @@
         line-height: 48px;
         padding: 0 40px;
         border-radius: 25px;
-        transition: .3s;
+        transition: $short-transition-time;
         margin: 0 auto;
         text-align: center;
         background: transparent;

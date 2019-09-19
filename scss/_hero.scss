@@ -142,7 +142,7 @@
         padding-top: 25px;
         flex-basis: 100%;
         text-align: center;
-        transition: .3s;
+        transition: $short-transition-time;
         border: none;
 
         &:hover {
@@ -177,7 +177,7 @@
     }
 
     &__svg-icon {
-        transition: .3s;
+        transition: $short-transition-time;
         fill: $medium-grey-text;
     }
 

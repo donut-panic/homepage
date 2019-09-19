@@ -45,7 +45,7 @@
         padding: 30px;
         background-color: rgba(255, 255, 255, .8);
         opacity: 0;
-        transition: .5s;
+        transition: $long-transition-time;
     }
 
     &__item-title {
@@ -62,7 +62,7 @@
         height: 3px;
         border: none;
         margin-bottom: 3rem;
-        transition: .5s .1s ease-out;
+        transition: $long-transition-time .1s ease-out;
     }
 
     &__item-desc {
