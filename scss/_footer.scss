@@ -1,0 +1,48 @@
+.footer {
+    &__contact {
+        @include flex(row, stretch, stretch);
+        font-family: $main-font;
+        color: #939393;
+        font-size: 1.3rem;
+        flex-wrap: wrap;
+    }
+
+    &__contact-field {
+        flex-grow: 1;
+        // padding-top: 25px;
+        flex-basis: 100%;
+        text-align: center;
+        transition: .3s;
+        // border: none;
+
+        @include media-query(small) {
+            flex-basis: 50%;        
+        }
+
+        @include media-query(large) {
+            flex-basis: 25%;
+            text-align: left;
+            // border-top: 1px solid #dddddd;    
+        }
+
+    }
+
+    &__contact-link {
+        text-decoration: none;
+        color: inherit;
+
+        &::after {
+            content: " →";
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+
+    }
+
+    &__contact-title {
+        margin-bottom: 1.2rem;
+    }
+
+}

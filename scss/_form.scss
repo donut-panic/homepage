@@ -8,8 +8,8 @@
         max-width: $max-width;
         border: none;
         border-bottom: 1px solid #ccc;
-        padding: 10px 0;
-        // margin-bottom: 30px;
+        padding: 10px 0 10px 0px;
+        background-color: transparent;
         transition: .3s;
 
         &::placeholder {
@@ -19,6 +19,7 @@
         &:focus {
             border-bottom-color: $primary-color;
             outline: none;
+            padding: 10px 0 10px 20px;
         }
 
         &:focus + .form__icon {
@@ -34,15 +35,19 @@
     }
 
     &__label {
-        @include flex(row, stretch, center);
+        display: block;
+        position: relative;
         margin-bottom: 30px;
     }
 
     &__icon {
+        position: absolute;
+        top: 16px;
+        left: 0;
         width: 10px;
-        margin-right: 10px;
+        // margin-right: 10px;
         opacity: 0;
-        order: -1;
+        // order: -1;
         fill: none;
         stroke-width: 2px;
         stroke: $primary-color;
