@@ -1,0 +1,27 @@
+.go-up {
+    height: 50px;
+    background-color: #353535;
+    position: relative;
+
+    &__icon-wrapper {
+        position: absolute;
+        display: block;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-25px);
+        width: 50px;
+        height: 50px;
+        // border: 3px solid #353535;
+        background-color: $primary-color;
+        border-radius: 50%;
+    }
+
+    &__arrow-icon {
+        @include svg(2px, #fff);
+    }
+
+    @include media-query(medium) {
+        display: none;
+    }
+
+}

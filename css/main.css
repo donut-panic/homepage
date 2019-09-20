@@ -590,7 +590,7 @@ html {
           justify-content: stretch;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -941,5 +941,38 @@ html {
   fill: none;
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;
+}
+
+.go-up {
+  height: 50px;
+  background-color: #353535;
+  position: relative;
+}
+
+.go-up__icon-wrapper {
+  position: absolute;
+  display: block;
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+  width: 50px;
+  height: 50px;
+  background-color: #09b97f;
+  border-radius: 50%;
+}
+
+.go-up__arrow-icon {
+  stroke-width: 2px;
+  stroke: #fff;
+  fill: none;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+@media screen and (min-width: 768px) {
+  .go-up {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

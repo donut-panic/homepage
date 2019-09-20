@@ -9,7 +9,7 @@
     &__section {
         @include flex(row, stretch, stretch);
         flex-basis: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
         @include media-query(large) {
             flex-basis: 50%;
