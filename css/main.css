@@ -37,6 +37,14 @@ html {
   color: #fff;
 }
 
+.body {
+  overflow: hidden;
+}
+
+.body--loaded {
+  overflow: auto;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,6 +981,106 @@ html {
 @media screen and (min-width: 768px) {
   .go-up {
     display: none;
+  }
+}
+
+.preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.preloader--disappear {
+  opacity: 0;
+}
+
+.preloader--hidden {
+  display: none;
+}
+
+.preloader__dots-wrapper {
+  width: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.preloader__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #09b97f;
+  -webkit-animation: dot-animation 1.8s infinite ease-in-out;
+          animation: dot-animation 1.8s infinite ease-in-out;
+}
+
+.preloader__dot:nth-child(2) {
+  -webkit-animation-delay: 0.16s;
+          animation-delay: 0.16s;
+}
+
+.preloader__dot:nth-child(3) {
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
+}
+
+@-webkit-keyframes dot-animation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes dot-animation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

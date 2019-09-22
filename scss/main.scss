@@ -12,6 +12,7 @@ html {
     color: #fff;
 }
 
+@import 'body';
 @import 'wrapper';
 @import 'hero';
 @import 'intro';
@@ -22,3 +23,4 @@ html {
 @import 'form';
 @import 'footer';
 @import 'go-up';
+@import 'preloader';

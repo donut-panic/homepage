@@ -1,0 +1,61 @@
+.preloader {
+    @include flex(row, center, center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 10;
+    opacity: 1;
+    transition: 1s;
+
+    &--disappear {
+        opacity: 0;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+    &__dots-wrapper {
+        width: 90px;
+        // height: 100px;
+        @include flex(row, center, space-between);
+        // background-color: yellow;
+    }
+
+    &__dot {
+        // display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        animation: dot-animation 1.8s infinite ease-in-out;
+
+        &:nth-child(2) {
+            animation-delay: 0.16s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.32s;
+        }
+
+    }
+
+
+}
+
+@keyframes dot-animation {
+    0% { 
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
