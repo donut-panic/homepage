@@ -35,6 +35,14 @@
         height: 150px;
         background-color: rgb(143, 143, 143);
         border-radius: 50%;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: 1.2s 1s ease;
+
+        &--hasLoaded {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
         @include media-query(large) {
             position: relative;
@@ -53,6 +61,14 @@
         line-height: 100%;
         margin-bottom: 2rem;
         text-align: center;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: 1.2s 1.2s ease;
+
+        &--hasLoaded {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
         @include media-query(large) {
             text-align: left;
@@ -74,6 +90,14 @@
         font-weight: 300;
         font-size: 1.7rem;
         text-align: center;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: 1.2s 1.4s ease;
+
+        &--hasLoaded {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
         @include media-query(large) {
             text-align: left;
