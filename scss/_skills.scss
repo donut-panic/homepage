@@ -1,0 +1,66 @@
+.skills {
+    @include flex(row, center, space-between);
+    // background-color: yellow;
+    width: 100%;
+    flex-wrap: wrap;
+    // height: 300px;
+    max-width: $max-width;
+
+    &__wrapper {
+        // background-color: red;
+        flex-basis: 48%;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    &__header {
+        @include flex(row, stretch, stretch);
+        font-family: $main-font;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        color: $dark-grey-text;
+        flex-grow: 1;
+    }
+
+    &__desc {
+        color: $medium-grey-text;
+    }
+
+    &__bar {
+        height: 6px;
+        border-radius: 3px;
+        width: 100%;
+        background-color: rgb(230, 230, 230);
+    }
+
+    &__bar-fill {
+        height: 6px;
+        border-radius: 3px;
+        background-color: $primary-color;
+
+        &--one {
+            width: 20%;
+        }
+
+        &--two {
+            width: 40%;
+        }
+
+        &--three {
+            width: 60%;
+        }
+
+        &--four {
+            width: 80%;
+        }
+
+        &--five {
+            width: 100%;
+        }
+
+    }
+
+}
