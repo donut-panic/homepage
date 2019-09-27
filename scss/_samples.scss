@@ -1,49 +1,49 @@
 .samples {
     display: grid;
-    grid-gap: 20px 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    grid-template-columns: 1fr;
     width: 100%;
     max-width: $max-width;
 
-    &__deco {
-        height: 40px;
-        background: url('../assets/svg/deco.svg') no-repeat;
-        background-size: 90px 24px;
-        background-position: right 50%;
-        border-bottom: 1px solid $light-grey-text;
-        width: 100%;
+    @include media-query(small) {
+        grid-template-columns: 1fr 1fr;
     }
 
     &__link {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        width: 100%;
-        height: 250px;
-        border: 1px solid $light-grey-text;
-        // border-radius: 15px;
-        // padding: 20px;
         text-decoration: none;
-        transition: .2s;
-        background-color: #fff;
-
-        &:hover {
-            // transform: scale(1.02);
-            // box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
-        }
-
     }
 
     &__title {
         font-family: $main-font;
-        font-size: 2rem;
-        // color: $light-grey-text;
-        color: $primary-color;
+        font-size: 1.7rem;
         font-weight: 700;
+        color: $dark-grey-text;
+        // color: $primary-color;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    &__line {
+        display: none;
+    }
+
+    &__desc {
+        font-family: $main-font;
+        font-size: 1.4rem;
+        color: $medium-grey-text;
+        text-decoration: none;
+        line-height: 140%;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        background-color: #ccc;
+        margin-bottom: 15px;
     }
 
     &__item {
-
+        position: relative;
     }
 
 }
