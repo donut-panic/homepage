@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 90 24" version="1.1" viewBox="0 0 90 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.outline {
+		fill: none;
+		stroke: #ccc;
+		stroke-linecap: round;
+		stroke-line-join: round;
+		stroke-miter-limit: 10;
+		vector-effects: non-scaling-stroke;
+		}
+</style>
+	<rect class="outline" x="35" y="2" width="20" height="20"/>
+	<line class="outline" x1="21" y1="22" y2="22"/>
+		<line class="outline" x1="69" x2="89" y1="2" y2="22"/>
+		<line class="outline" x1="89" x2="69" y1="2" y2="22"/>
+</svg>
