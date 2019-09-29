@@ -724,39 +724,94 @@ html {
 }
 
 .samples__link {
+  display: block;
+  width: 100%;
   text-decoration: none;
+  position: relative;
+}
+
+.samples__link:hover .samples__content {
+  opacity: 1;
+}
+
+.samples__link:hover .samples__line {
+  width: 100px;
 }
 
 .samples__title {
   font-family: Lato, sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #727272;
+  color: #fff;
   text-decoration: none;
   margin-bottom: 10px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.samples__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 185, 127, 0.8);
+  background-image: url("../assets/svg/buttons.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 115px 35px;
+  padding: 60px 30px 30px 30px;
+  opacity: 0;
 }
 
 .samples__line {
-  display: none;
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: #fff;
+  border: none;
+  margin-bottom: 15px;
+  -webkit-transition: .9s ease-out;
+  transition: .9s ease-out;
 }
 
 .samples__desc {
+  color: #fff;
   font-family: Lato, sans-serif;
-  font-size: 1.4rem;
-  color: #939393;
+  font-size: 1.3rem;
   text-decoration: none;
   line-height: 140%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.samples__more {
+  color: #fff;
+  font-family: Lato, sans-serif;
+  font-size: 1.3rem;
+  text-align: right;
 }
 
 .samples__img {
   display: block;
   width: 100%;
   background-color: #ccc;
-  margin-bottom: 15px;
-}
-
-.samples__item {
-  position: relative;
 }
 
 .download {
@@ -1177,6 +1232,7 @@ html {
 }
 
 .skills__span {
+  font-size: .9rem;
   color: #939393;
 }
 
