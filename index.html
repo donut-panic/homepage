@@ -10,7 +10,6 @@
         href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&subset=latin,latin-ext'
         rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/preloader.js"></script>
 </head>
 
 <body class="body">
@@ -371,10 +370,21 @@
             <div class="samples">
                 <div class="samples__item">
                     <a href="" class="samples__link">
-                        <img class="samples__img" src="https://picsum.photos/seed/picsum/300/220?grayscale"
-                            alt="Weather React App" />
+                        <img class="samples__img" src="assets/img/scr_tooltip.jpg" alt="Weather React App" />
                         <div class="samples__content">
-                            <h1 class="samples__title">REACT WEATHER APP</h1>
+                            <h1 class="samples__title">FLEXIBLE TOOLTIPS</h1>
+                            <hr class="samples__line" />
+                            <p class="samples__desc">An easy-to-use tooltip system that is using data attributes in
+                                order to pass content.</p>
+                            <p class="samples__more">Try it →</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="samples__item">
+                    <a href="" class="samples__link">
+                        <img class="samples__img" src="assets/img/scr_todo.jpg" alt="Weather React App" />
+                        <div class="samples__content">
+                            <h1 class="samples__title">REACT TODO APP</h1>
                             <hr class="samples__line" />
                             <p class="samples__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
                                 praesentium laudantium! Qua laboriosam quidem.</p>
@@ -384,21 +394,7 @@
                 </div>
                 <div class="samples__item">
                     <a href="" class="samples__link">
-                        <img class="samples__img" src="https://picsum.photos/seed/picsum/300/220?grayscale"
-                            alt="Weather React App" />
-                        <div class="samples__content">
-                            <h1 class="samples__title">REACT WEATHER APP</h1>
-                            <hr class="samples__line" />
-                            <p class="samples__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-                                praesentium laudantium! Qua laboriosam quidem.</p>
-                            <p class="samples__more">Try it →</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="samples__item">
-                    <a href="" class="samples__link">
-                        <img class="samples__img" src="https://picsum.photos/seed/picsum/300/220?grayscale"
-                            alt="Weather React App" />
+                        <img class="samples__img" src="assets/img/scr_weather.jpg" alt="Weather React App" />
                         <div class="samples__content">
                             <h1 class="samples__title">REACT WEATHER APP</h1>
                             <hr class="samples__line" />
@@ -435,22 +431,22 @@
             <div class="form">
                 <form action="#">
                     <label class="form__label">
-                        <input class="form__text-input" type="text" placeholder="Your e-mail address" />
+                        <input name="email" class="form__text-input" type="text" placeholder="Your e-mail address" />
                         <svg viewBox="0 0 20 20" class="form__icon">
                             <path d="M0 0 L10 10 L0 20"></path>
                         </svg>
                     </label>
-                    <label class="form__label form__label--error">
-                        Wrong e-mail address
+                    <label class="form__validation-info" id="email-label">
+                        Some e-mail address would be useful
                     </label>
                     <label class="form__label">
-                        <textarea class="form__text-area" placeholder="Your message"></textarea>
+                        <textarea name="message" class="form__text-area" placeholder="Your message"></textarea>
                         <svg viewBox="0 0 20 20" class="form__icon">
                             <path d="M0 0 L10 10 L0 20"></path>
                         </svg>
                     </label>
-                    <label class="form__label form__label--error">
-                        Wrong e-mail address
+                    <label class="form__validation-info" id="message-label">
+                        Really, no message?
                     </label>
                     <input class="form__button" type="submit" value="SEND" />
                 </form>

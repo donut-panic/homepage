@@ -37,13 +37,20 @@
         display: block;
         position: relative;
         margin-bottom: 30px;
+    }
+
+    &__validation-info {
+        display: block;
+        opacity: 0;
+        font-family: $main-font;
+        color: $primary-color;
+        font-size: 1.2rem;
+        height: 30px;
+        margin: -20px 0 0 0;
+        transition: $short-transition-time;
 
         &--error {
-            font-family: $main-font;
-            color: $primary-color;
-            font-size: 1.2rem;
-            height: 30px;
-            margin: -20px 0 0 0;
+            opacity: 1;
         }
 
     }
