@@ -265,6 +265,10 @@ html {
           transform: translateY(-20px);
   -webkit-transition: 1.2s .2s ease;
   transition: 1.2s .2s ease;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
 }
 
 .hero__img--hasLoaded {
@@ -295,6 +299,10 @@ html {
           transform: translateY(-20px);
   -webkit-transition: 1.2s .4s ease;
   transition: 1.2s .4s ease;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
 }
 
 .hero__heading1--hasLoaded {
@@ -328,6 +336,10 @@ html {
           transform: translateY(-20px);
   -webkit-transition: 1.2s .6s ease;
   transition: 1.2s .6s ease;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
 }
 
 .hero__heading2--hasLoaded {
@@ -421,6 +433,10 @@ html {
           transform: translateY(-20px);
   -webkit-transition: 1.2s .8s ease;
   transition: 1.2s .8s ease;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
 }
 
 .hero__social-media--hasLoaded {
@@ -850,7 +866,12 @@ html {
   color: #fff;
 }
 
-.form__text-input, .form__text-area {
+.contact-form__form {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact-form__text-input, .contact-form__text-area {
   display: block;
   font-family: Lato, sans-serif;
   font-size: 1.6rem;
@@ -864,45 +885,45 @@ html {
   transition: 0.3s;
 }
 
-.form__text-input::-webkit-input-placeholder, .form__text-area::-webkit-input-placeholder {
+.contact-form__text-input::-webkit-input-placeholder, .contact-form__text-area::-webkit-input-placeholder {
   color: #939393;
 }
 
-.form__text-input:-ms-input-placeholder, .form__text-area:-ms-input-placeholder {
+.contact-form__text-input:-ms-input-placeholder, .contact-form__text-area:-ms-input-placeholder {
   color: #939393;
 }
 
-.form__text-input::-ms-input-placeholder, .form__text-area::-ms-input-placeholder {
+.contact-form__text-input::-ms-input-placeholder, .contact-form__text-area::-ms-input-placeholder {
   color: #939393;
 }
 
-.form__text-input::placeholder, .form__text-area::placeholder {
+.contact-form__text-input::placeholder, .contact-form__text-area::placeholder {
   color: #939393;
 }
 
-.form__text-input:focus, .form__text-area:focus {
+.contact-form__text-input:focus, .contact-form__text-area:focus {
   border-bottom-color: #09b97f;
   outline: none;
   padding: 10px 0 10px 20px;
 }
 
-.form__text-input:focus + .form__icon, .form__text-area:focus + .form__icon {
+.contact-form__text-input:focus + .contact-form__icon, .contact-form__text-area:focus + .contact-form__icon {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.form__text-area {
+.contact-form__text-area {
   height: 300px;
 }
 
-.form__label {
+.contact-form__label {
   display: block;
   position: relative;
   margin-bottom: 30px;
 }
 
-.form__validation-info {
+.contact-form__validation-info {
   display: block;
   opacity: 0;
   font-family: Lato, sans-serif;
@@ -914,11 +935,11 @@ html {
   transition: 0.3s;
 }
 
-.form__validation-info--error {
+.contact-form__validation-info--error {
   opacity: 1;
 }
 
-.form__icon {
+.contact-form__icon {
   stroke-width: 2px;
   stroke: #09b97f;
   fill: none;
@@ -935,7 +956,7 @@ html {
           transform: translateX(-20px);
 }
 
-.form__button {
+.contact-form__button {
   width: 100%;
   display: inline-block;
   border: 1px solid #09b97f;
@@ -957,15 +978,20 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  .form__button {
+  .contact-form__button {
     width: auto;
   }
 }
 
-.form__button:hover {
+.contact-form__button:hover {
   border-color: #09b97f;
   background-color: #09b97f;
   color: #fff;
+}
+
+.contact-form__goodbye-text {
+  font-family: Lato, sans-serif;
+  font-size: 1.2rem;
 }
 
 .footer__contact {
@@ -1242,6 +1268,13 @@ html {
 .skills__span {
   font-size: .9rem;
   color: #939393;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .skills__span {
+    display: inline;
+  }
 }
 
 .skills__header {

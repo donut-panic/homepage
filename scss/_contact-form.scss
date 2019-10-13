@@ -1,4 +1,9 @@
-.form {
+.contact-form {
+
+    &__form {
+        transition: $long-transition-time;
+    }
+
     &__text-input {
         display: block;
         font-family: $main-font;
@@ -21,7 +26,7 @@
             padding: 10px 0 10px 20px;
         }
 
-        &:focus + .form__icon {
+        &:focus + .contact-form__icon {
             opacity: 1;
             transform: translateX(0);
         }
@@ -29,7 +34,7 @@
     }
 
     &__text-area {
-        @extend .form__text-input;
+        @extend .contact-form__text-input;
         height: 300px;
     }
 
@@ -95,6 +100,11 @@
             background-color: $primary-color;
             color: #fff;
         }
+    }
+
+    &__goodbye-text {
+        font-family: $main-font;
+        font-size: 1.2rem;
     }
 
 }

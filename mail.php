@@ -1,15 +1,16 @@
 <?php
-if ($_POST) {
+
     $to = "yaroslawek@gmail.com";
     $subject = 'Wiadomość ze strony KARCZEWSKI.DEV';
-    $data = json_decode(file_get_contents('php://input'), true);
-    $message = 'Name: '.$data['email'].' Message: '.$data['message'];
-    $success = mail($to, $subject, $message);
-    if ($success) {
-        echo "Success!";
+
+    if (isset($_POST['email']) && isset($_POST['message'])) {
+        $message = "Wiadomość od " . $_POST['email'] . ": " . $_POST['message'];
+        $success = mail($to, $subject, $message);
+        if ($success) {
+            echo "Thanks for your message! I'll respond as soon as possible.";
+        } else {
+            echo "Something went wrong :( Try normal e-mail please.";
+        }
     }
-    else {
-        echo "Fail";
-    }
-}
+
 ?>

@@ -18,6 +18,12 @@
     &__span {
         font-size: .9rem;
         color: $medium-grey-text;
+        display: block;
+
+        @include media-query(medium) {
+            display: inline;         
+        }
+
     }
 
     &__header {
