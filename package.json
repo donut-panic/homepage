@@ -8,11 +8,16 @@
   },
   "author": "",
   "license": "ISC",
-  "browserslist": "> 2%",
+  "browserslist": [
+    "> 3%",
+    "last 2 versions"
+  ],
   "devDependencies": {
     "autoprefixer": "^9.6.4",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
