@@ -5,12 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, '../', 'dist'),
-        filename: 'main-[contenthash:6].js'
-        // publicPath: '/dist/'
+        filename: 'main-[contenthash:6].js',
+    },
+    devServer: {
+        compress: true,
+        port: 9000
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -53,7 +56,16 @@ module.exports = {
                 test: /\.php$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'php/[name].[ext]',
+                    outputPath: 'php',
+                    name: '[name].[ext]',
+                }
+            },
+            {
+                test: /\.pdf$/,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'assets/pdf',
+                    name: '[name].[ext]',
                 }
             },
             {

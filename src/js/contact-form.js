@@ -33,7 +33,7 @@ export default function () {
 
         if (isEmailValid && isMessageValid) {
             const formData = new FormData(this);
-            fetch('mail.php', {
+            fetch('php/mail.php', {
                 method: 'post',
                 body: formData
             }).then(function (response) {
