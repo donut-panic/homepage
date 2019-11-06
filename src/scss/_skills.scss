@@ -27,7 +27,7 @@
     }
 
     &__header {
-        @include flex(row, stretch, stretch);
+        @include flex(row, flex-end, stretch);
         font-family: $main-font;
         font-size: 1.3rem;
         margin-bottom: 5px;
