@@ -28,5 +28,7 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "image-webpack-loader": "^6.0.0"
+  }
 }

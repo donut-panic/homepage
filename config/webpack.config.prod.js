@@ -43,10 +43,26 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif)$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'assets/img/[name]-[contenthash:6].[ext]',
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'assets/img/[name]-[contenthash:6].[ext]',
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 55
+                            },
+                            optipng: {
+                                enabled: false,
+                            },
+                        }
+                    }
+                ]
             },
             {
                 test: /\.html/,

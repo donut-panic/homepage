@@ -12,8 +12,8 @@ export default function () {
 
         e.preventDefault();
 
-        // let isEmailValid = false;
-        // let isMessageValid = false;
+        let isEmailValid = false;
+        let isMessageValid = false;
 
         if (email.value.length > 0) {
             isEmailValid = true;
