@@ -59,6 +59,7 @@ module.exports = {
                             },
                             optipng: {
                                 enabled: false,
+                                optimizationLevel: 7
                             },
                         }
                     }
