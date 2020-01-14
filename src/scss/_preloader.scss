@@ -18,44 +18,40 @@
         display: none;
     }
 
+    // Dots
     &__dots-wrapper {
-        width: 90px;
-        // height: 100px;
-        @include flex(row, center, space-between);
-        // background-color: yellow;
+        position: relative;
+        width: 80px;
+        height: 20px;
     }
 
     &__dot {
-        // display: inline-block;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
         width: 20px;
         height: 20px;
         border-radius: 50%;
         background-color: $primary-color;
-        animation: dot-animation 1.8s infinite ease-in-out;
-
-        &:nth-child(2) {
-            animation-delay: 0.16s;
-        }
-
-        &:nth-child(3) {
-            animation-delay: 0.32s;
-        }
-
+        animation-fill-mode: both;
+        animation: dot-animation 1.4s infinite ease-in-out;
+        animation-delay: -0.32s;
     }
 
+    &__dot:nth-child(1) {
+        left: 30px;
+        animation-delay: -0.16s;
+    }
+
+    &__dot:nth-child(2) {
+        left: 60px;
+        animation-delay: 0s;
+    }
 
 }
 
 @keyframes dot-animation {
-    0% { 
-        transform: scale(0);
-    }
-
-    50% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(0);
-    }
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
 }
