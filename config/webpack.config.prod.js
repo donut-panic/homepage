@@ -111,6 +111,19 @@ module.exports = {
                         }
                     }, 'sass-loader'
                 ]
+            },
+            {
+                test: /\.css$/,
+                include: /node_modules/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: true
+                        }
+                    }
+                ]
             }
         ]
     }
