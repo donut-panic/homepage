@@ -10,7 +10,7 @@
 
 <body class="body">
     <!-- MAIN SCREEN -->
-    <div class="hero">
+    <div class="hero" id="top">
         <div class="hero__photo" data-aos="fade-down">
             <img class="hero__img" src="assets/img/jk.png"></img>
         </div>
@@ -46,27 +46,27 @@
                 </div>
             </div>
             <div class="hero__contact">
-                <div data-aos="fade-down" data-aos-delay="900">
+                <div class="hero__contact-box" data-aos="fade-down" data-aos-delay="900">
                     <div class="hero__contact-field">
                         <h4 class="hero__contact-title">Location</h4>
                         <p>Poznań, Poland</p>
                     </div>
                 </div>
-                <div data-aos="fade-down" data-aos-delay="1200">
+                <div class="hero__contact-box" data-aos="fade-down" data-aos-delay="1200">
                     <div class="hero__contact-field">
                         <h4 class="hero__contact-title">Mobile</h4>
                         <p>537-870-048</p>
                     </div>
                 </div>
-                <div data-aos="fade-down" data-aos-delay="1500">
+                <div class="hero__contact-box" data-aos="fade-down" data-aos-delay="1500">
                     <div class="hero__contact-field">
                         <h4 class="hero__contact-title">My projects</h4>
-                        <p><a href="#sample-projects" class="hero__contact-link">See sample
+                        <p><a href="#" class="hero__contact-link" data-scroll-to="samples">See sample
                                 projects</a>
                         </p>
                     </div>
                 </div>
-                <div data-aos="fade-down" data-aos-delay="1800">
+                <div class="hero__contact-box" data-aos="fade-down" data-aos-delay="1800">
                     <div class="hero__contact-field">
                         <h4 class="hero__contact-title">GitHub</h4>
                         <p><a href="http://github.com/donut-panic" class="hero__contact-link">donut-panic</a></p>
@@ -373,7 +373,7 @@
         </div>
     </div>
     <!-- SAMPLES-->
-    <div class="wrapper" id="sample-projects">
+    <div class="wrapper" id="samples">
         <div class="wrapper__header wrapper__header--dark">
             <div data-aos="fade-right" data-aos-offset="300">
                 <h1 class="wrapper__heading">SAMPLE PROJECTS</h1>
@@ -382,7 +382,7 @@
         </div>
         <div class="wrapper__content wrapper__content--dark">
             <div class="samples">
-                <div class="samples__item">
+                <div class="samples__item" data-aos="fade-down" data-aos-offset="300">
                     <a href="http://areyouok.vot.pl/playground/responsive_tooltips/" class="samples__link">
                         <img class="samples__img" src="assets/img/tooltip-screen.png" alt="Weather React App" />
                         <div class="samples__content">
@@ -394,7 +394,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="samples__item">
+                <div class="samples__item" data-aos="fade-down" data-aos-offset="300" data-aos-delay="200">
                     <a href="https://to-do-app-bd889.firebaseapp.com/" class="samples__link">
                         <img class="samples__img" src="assets/img/todo-screen.png" alt="Weather React App" />
                         <div class="samples__content">
@@ -407,7 +407,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="samples__item">
+                <div class="samples__item" data-aos="fade-down" data-aos-offset="300" data-aos-delay="300">
                     <a href="http://areyouok.vot.pl/playground/weather/" class="samples__link">
                         <img class="samples__img" src="assets/img/weather-screen.png" alt="Weather React App" />
                         <div class="samples__content">
@@ -474,7 +474,7 @@
                 </div>
                 <div class="footer__contact-field">
                     <h4 class="footer__contact-title">My projects</h4>
-                    <p><a href="#sample-projects" class="footer__contact-link">See sample
+                    <p><a href="#" class="footer__contact-link" data-scroll-to="samples">See sample
                             projects</a></p>
                 </div>
                 <div class="footer__contact-field">
@@ -482,7 +482,7 @@
                     <p><a href="https://github.com/donut-panic" class="footer__contact-link">donut-panic</a></p>
                 </div>
             </div>
-            <a href="#" class="footer__go-up scroll-to-top">
+            <a href="#" class="footer__go-up" data-scroll-to="top">
                 <svg class="footer__arrow-icon" enable-background="new 0 0 50 50" version="1.1" viewBox="0 0 50 50"
                     xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                     <polyline class="st0" points="15.9 21.8 25 12.8 34.1 21.8" />
@@ -491,7 +491,7 @@
             </a>
         </div>
         <div class="go-up">
-            <a href="#" class="go-up__icon-wrapper scroll-to-top">
+            <a href="#" class="go-up__icon-wrapper" data-scroll-to="top">
                 <svg class="go-up__arrow-icon" enable-background="new 0 0 50 50" version="1.1" viewBox="0 0 50 50"
                     xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                     <polyline class="st0" points="15.9 21.8 25 12.8 34.1 21.8" />

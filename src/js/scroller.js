@@ -1,15 +1,22 @@
-export default function () {
+export default class Scroller {
 
-    const scrollToTopTriggers = document.querySelectorAll('.scroll-to-top');
+    constructor() {
+        this.scrollTriggers = document.querySelectorAll('[data-scroll-to]');
+        this.addEvents();
+    }
 
-    scrollToTopTriggers.forEach(function (trigger) {
-        trigger.addEventListener('click', function (e) {
-            e.preventDefault();
-            window.scroll({
-                top: 0,
-                behavior: 'smooth'
+    addEvents() {
+        this.scrollTriggers.forEach(function (trigger) {
+            trigger.addEventListener('click', function (event) {
+                event.preventDefault();
+                const scrollTo = document.getElementById(trigger.dataset.scrollTo);
+                const yPosition = scrollTo.offsetTop;
+                window.scroll({
+                    top: yPosition,
+                    behavior: 'smooth'
+                });
             });
         });
-    });
+    }
 
 }

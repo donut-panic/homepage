@@ -36,15 +36,6 @@
         background-color: rgb(143, 143, 143);
         border-radius: 50%;
         object-fit: cover;
-        // opacity: 0;
-        // transform: translateY(-20px);
-        // transition: 1.2s .2s ease;
-        // transition-property: transform, opacity;
-
-        // &--hasLoaded {
-        //     transform: translateY(0);
-        //     opacity: 1;
-        // }
 
         @include media-query(large) {
             position: relative;
@@ -63,15 +54,6 @@
         line-height: 100%;
         margin-bottom: 2rem;
         text-align: center;
-        // opacity: 0;
-        // transform: translateY(-20px);
-        // transition: 1.2s .4s ease;
-        // transition-property: transform, opacity;
-
-        // &--hasLoaded {
-        //     transform: translateY(0);
-        //     opacity: 1;
-        // }
 
         @include media-query(large) {
             text-align: left;
@@ -93,15 +75,6 @@
         font-weight: 300;
         font-size: 1.7rem;
         text-align: center;
-        // opacity: 0;
-        // transform: translateY(-20px);
-        // transition: 1.2s .6s ease;
-        // transition-property: transform, opacity;
-
-        // &--hasLoaded {
-        //     transform: translateY(0);
-        //     opacity: 1;
-        // }
 
         @include media-query(large) {
             text-align: left;
@@ -150,15 +123,6 @@
     &__social-media {
         font-size: 0;
         margin: 50px 0;
-        // opacity: 0;
-        // transform: translateY(-20px);
-        // transition: 1.2s .8s ease;
-        // transition-property: transform, opacity;
-
-        // &--hasLoaded {
-        //     transform: translateY(0);
-        //     opacity: 1;
-        // }
 
         @include media-query(large) {
             margin: 0;
@@ -166,27 +130,31 @@
 
     }
 
+    // Contact fields
     &__contact {
         @include flex(row, stretch, stretch);
         font-family: $main-font;
         color: #939393;
         font-size: 1.3rem;
         flex-wrap: wrap;
-        // opacity: 0;
-        // transform: translateY(20px);
-        // transition: 1.2s 1s ease;
+    }
 
-        // &--hasLoaded {
-        //     transform: translateY(0);
-        //     opacity: 1;
-        // }
+    &__contact-box {
+        flex-grow: 1;
+        flex-basis: 100%;
+
+        @include media-query(small) {
+            flex-basis: 50%;        
+        }
+
+        @include media-query(large) {
+            flex-basis: 25%;  
+        }
 
     }
 
     &__contact-field {
-        flex-grow: 1;
         padding-top: 25px;
-        flex-basis: 100%;
         text-align: center;
         transition: $short-transition-time;
         border: none;
@@ -196,12 +164,7 @@
             color: $primary-color;
         }
 
-        @include media-query(small) {
-            flex-basis: 50%;        
-        }
-
         @include media-query(large) {
-            flex-basis: 25%;
             text-align: left;
             border-top: 1px solid #dddddd;    
         }

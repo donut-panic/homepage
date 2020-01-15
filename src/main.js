@@ -8,5 +8,5 @@ import './scss/main.scss';
 import 'aos/dist/aos.css';
 
 Loader();
-Scroller();
+const scroller = new Scroller();
 ContactForm();
