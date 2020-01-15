@@ -1,11 +1,12 @@
 import Scroller from './js/scroller.js';
-import Preloader from './js/preloader.js';
+import Loader from './js/loader.js';
 import ContactForm from './js/contact-form.js';
 
 import './php/mail.php';
 import './assets/pdf/jk-resume.pdf';
 import './scss/main.scss';
+import 'aos/dist/aos.css';
 
+Loader();
 Scroller();
-Preloader();
 ContactForm();
