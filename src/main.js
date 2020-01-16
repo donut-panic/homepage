@@ -1,4 +1,4 @@
-import Scroller from './js/scroller.js';
+import Scroller from './js/Scroller.js';
 import Loader from './js/loader.js';
 import ContactForm from './js/contact-form.js';
 
