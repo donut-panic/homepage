@@ -382,7 +382,7 @@
         </div>
         <div class="wrapper__content wrapper__content--dark">
             <div class="samples">
-                <div class="samples__item" data-aos="fade-down" data-aos-offset="300">
+                <div class="samples__item" data-aos="fade-in" data-aos-offset="300">
                     <a href="http://areyouok.vot.pl/playground/responsive_tooltips/" class="samples__link">
                         <img class="samples__img" src="assets/img/tooltip-screen.png" alt="Weather React App" />
                         <div class="samples__content">
@@ -390,12 +390,13 @@
                             <hr class="samples__line" />
                             <p class="samples__desc">An easy-to-use tooltip system. Created in object oriented
                                 JavaScript. </p>
-                            <p class="samples__more">Try it →</p>
+                            <p class="samples__more">Read more →</p>
                         </div>
                     </a>
                 </div>
-                <div class="samples__item" data-aos="fade-down" data-aos-offset="300" data-aos-delay="200">
-                    <a href="https://to-do-app-bd889.firebaseapp.com/" class="samples__link">
+                <div class="samples__item" data-aos="fade-in" data-aos-offset="300" data-aos-delay="200">
+                    <a href="https://to-do-app-bd889.firebaseapp.com/" data-modal-open="todo_modal"
+                        class="samples__link">
                         <img class="samples__img" src="assets/img/todo-screen.png" alt="Weather React App" />
                         <div class="samples__content">
                             <h1 class="samples__title">REACT TODO APP</h1>
@@ -403,19 +404,20 @@
                             <p class="samples__desc">Yet another to-do application created in React.js Authorization and
                                 data storing provided by Firebase.
                             </p>
-                            <p class="samples__more">Try it →</p>
+                            <p class="samples__more">Read more →</p>
                         </div>
                     </a>
                 </div>
-                <div class="samples__item" data-aos="fade-down" data-aos-offset="300" data-aos-delay="300">
-                    <a href="http://areyouok.vot.pl/playground/weather/" class="samples__link">
+                <div class="samples__item" data-aos="fade-in" data-aos-offset="300" data-aos-delay="300">
+                    <a href="http://areyouok.vot.pl/playground/weather/" data-modal-open="weather_modal"
+                        class="samples__link">
                         <img class="samples__img" src="assets/img/weather-screen.png" alt="Weather React App" />
                         <div class="samples__content">
                             <h1 class="samples__title">REACT WEATHER APP</h1>
                             <hr class="samples__line" />
                             <p class="samples__desc">My first React.js application created in order to practice API
                                 requests. Data provided by Open Weather Map.</p>
-                            <p class="samples__more">Try it →</p>
+                            <p class="samples__more">Read more →</p>
                         </div>
                     </a>
                 </div>
@@ -508,6 +510,43 @@
             <div class="preloader__dot"></div>
         </div>
     </div>
+
+    <!-- APP MODAL: TO-DO -->
+    <div class="app" id="todo_modal">
+        <section class="app__content">
+            <h1 class="app__title">Firebase to-do app</h1">
+                <p class="app__lead">Yet another to-do application created in React.js. Authorization and data storing
+                    provided by Firebase.</p>
+                <p class="app__text">I started learning ReactJS in 2019. Obviously, you can't learn a lot without
+                    practicing. You can find dozens of tutorials on how to create this kind of app, but I wanted to go
+                    one step further and use Firebase (to store state and manage users). Even it's far from perfect, I
+                    learned a lot when creating this.</p>
+                <p class="app__text">
+                    <a href="#" class="app__link">Github page</a>
+                    <a href="#" class="app__link">Demo version</a>
+                </p>
+        </section>
+        <div class="app__close"></div>
+    </div>
+
+    <!-- APP MODAL: WEATHER APP -->
+    <div class="app" id="weather_modal">
+        <section class="app__content">
+            <h1 class="app__title">Weather application</h1">
+                <p class="app__lead">Yet another to-do application created in React.js. Authorization and data storing
+                    provided by Firebase.</p>
+                <p class="app__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta porro cumque,
+                    earum eveniet possimus numquam libero fugiat nemo beatae suscipit, obcaecati ipsam voluptatem,
+                    pariatur ipsa vel id odio sint.</p>
+                <p class="app__text">
+                    <a href="#" class="app__link">Github page</a>
+                    <a href="#" class="app__link">Demo version</a>
+                </p>
+        </section>
+        <div class="app__close"></div>
+    </div>
+
+
 </body>
 
 </html>
