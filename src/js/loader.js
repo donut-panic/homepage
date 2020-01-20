@@ -11,7 +11,8 @@ export default function () {
             AOS.init({
                 duration: 1000,
                 easing: 'ease',
-                once: true
+                once: true,
+                disable: 'mobile',
             });
         });
         preloader.classList.add('preloader--disappear');
