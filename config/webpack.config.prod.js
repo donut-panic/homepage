@@ -35,19 +35,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.svg$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'assets/svg/[name]-[contenthash:6].[ext]',
-                }
-            },
-            {
-                test: /\.(jpe?g|png|gif)$/,
+                test: /\.(jpe?g|png|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            name: 'assets/img/[name]-[contenthash:6].[ext]',
+                            name: 'public/[name]-[contenthash:6].[ext]',
                         }
                     },
                     {
@@ -60,7 +53,7 @@ module.exports = {
                             optipng: {
                                 enabled: false,
                                 optimizationLevel: 7
-                            },
+                            }
                         }
                     }
                 ]
@@ -81,7 +74,7 @@ module.exports = {
                 test: /\.pdf$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'assets/pdf',
+                    outputPath: 'public',
                     name: '[name].[ext]',
                 }
             },
@@ -89,7 +82,7 @@ module.exports = {
                 test: /\.(eot|woff|ttf)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'assets/fonts/[name]-[contenthash:6].[ext]'
+                    name: 'public/[name]-[contenthash:6].[ext]'
                 }
             },
             {
